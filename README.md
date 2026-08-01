@@ -29,8 +29,28 @@ gray `#8E8B85`, line `#E8E1D3`. No red anywhere.
 
 ## Keeping in sync
 
-`delete-my-data.html` is a COPY. The canonical version lives in the app repo at
-`legal/delete-my-data.html`, next to the `deleteAccount` callable it describes,
-so that changing what deletion actually does and changing what the page claims
-happen in the same place. If you edit one, edit both — a page that overstates
-what is erased is a compliance problem, not a typo.
+`delete-my-data.html` and `privacy-policy.html` are COPIES. The canonical
+versions live in the app repo under `legal/`, next to the code they describe —
+so that changing what the app actually collects and changing what the pages
+claim happen in the same place. If you edit one, edit both. A page that
+overstates what is erased, or understates what is collected, is a compliance
+problem rather than a typo.
+
+## Things that will make these pages wrong
+
+Each of these silently invalidates a published claim, so revisit both pages:
+
+- **Moving the developer account to the Philippines.** The privacy policy names
+  a French establishment and the GDPR that follows from it. A non-EU controller
+  still serving EU users needs an Article 27 EU representative named here.
+- **Pasting real RevenueCat keys.** Billing is currently inert, so RevenueCat
+  collects nothing and is deliberately not listed as a processor. The moment it
+  is configured it collects device identifiers and subscriber attributes, and
+  both this policy and the Play Data Safety form must be updated.
+- **Adding analytics or crash reporting.** The policy states plainly that there
+  are none. Verified against the shipped APK on 2026-07-31.
+- **Changing the Firestore region.** The policy names Singapore
+  (`asia-southeast1`) and the Standard Contractual Clauses covering that
+  transfer.
+- **Restricting distribution to the Philippines.** Would change the GDPR
+  analysis, since the targeting limb would no longer apply.
