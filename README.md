@@ -12,7 +12,7 @@ Served by GitHub Pages from the `main` branch, root folder:
 | --- | --- |
 | Index | `https://unremarkableapps.github.io/kamusta-legal/` |
 | Account &amp; data deletion | `https://unremarkableapps.github.io/kamusta-legal/delete-my-data.html` |
-| Privacy policy | `privacy-policy.html` — not added yet |
+| Privacy policy | `https://unremarkableapps.github.io/kamusta-legal/privacy-policy.html` |
 
 The deletion URL is the one submitted to Google Play, which requires it to be
 reachable **without any login**.
@@ -40,9 +40,6 @@ problem rather than a typo.
 
 Each of these silently invalidates a published claim, so revisit both pages:
 
-- **Moving the developer account to the Philippines.** The privacy policy names
-  a French establishment and the GDPR that follows from it. A non-EU controller
-  still serving EU users needs an Article 27 EU representative named here.
 - **Pasting real RevenueCat keys.** Billing is currently inert, so RevenueCat
   collects nothing and is deliberately not listed as a processor. The moment it
   is configured it collects device identifiers and subscriber attributes, and
@@ -50,7 +47,10 @@ Each of these silently invalidates a published claim, so revisit both pages:
 - **Adding analytics or crash reporting.** The policy states plainly that there
   are none. Verified against the shipped APK on 2026-07-31.
 - **Changing the Firestore region.** The policy names Singapore
-  (`asia-southeast1`) and the Standard Contractual Clauses covering that
-  transfer.
-- **Restricting distribution to the Philippines.** Would change the GDPR
-  analysis, since the targeting limb would no longer apply.
+  (`asia-southeast1`) as the location of the database, and the data processing
+  agreement with Google as what covers sending information outside the country.
+- **Widening distribution beyond the Philippines.** The policy is written to a
+  single regime, the Data Privacy Act, with the National Privacy Commission as
+  the sole supervisory authority. Distributing into territories with their own
+  data-protection regimes is a question for the lawyer before the release, not
+  after it.
