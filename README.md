@@ -1,6 +1,6 @@
 # kamusta-legal
 
-Public legal pages for **Kamusta**, a family check-in app by **unremarkableapps**.
+Public legal pages for **Kamusta**, a family check-in app by **Rica R. Redonia**.
 
 This repo exists to be public. The app's source lives in a separate, private
 repo — nothing here should ever contain code, keys, or anything not intended
